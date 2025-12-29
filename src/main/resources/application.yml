@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: TransactionProcessor
+
+etcd:
+  endpoints:
+    - http://localhost:2379
+
+server:
+  port: 8080
+
+app:
+  instance:
+    id: 101
+  lock:
+    lease:
+      ttl: 30
+  claim:
+    lease:
+      ttl: 15
